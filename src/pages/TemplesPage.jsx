@@ -27,7 +27,7 @@ const templesData = {
     { 
       name: 'Mysore Palace', 
       description: 'Magnificent royal palace showcasing Indo-Saracenic architecture',
-      image: "../src/pages/image/karanataka.webp",
+      image: '/pages/karanataka.webp',
       rating: 4.6,
       visitTime: '1-2 hours',
       highlights: ['Royal Heritage', 'Architecture', 'Light Show']
@@ -37,7 +37,7 @@ const templesData = {
     { 
       name: 'Tirupati', 
       description: 'One of the most visited pilgrimage sites dedicated to Lord Venkateswara',
-      image: '/image/andhra_pradesh.jpg',
+      image: '/pages/andhra_pradesh.jpg',
       rating: 4.9,
       visitTime: '3-4 hours',
       highlights: ['Sacred Temple', 'Pilgrimage', 'Spiritual']
@@ -45,7 +45,7 @@ const templesData = {
     { 
       name: 'Lepakshi', 
       description: 'Famous for its hanging pillar and exquisite Vijayanagara paintings',
-      image: '/image/andhra_pradesh.jpg',
+      image: '/pages/andhra_pradesh.jpg',
       rating: 4.5,
       visitTime: '2 hours',
       highlights: ['Hanging Pillar', 'Ancient Art', 'Architecture']
@@ -55,7 +55,7 @@ const templesData = {
     { 
       name: 'Meenakshi Temple', 
       description: 'Stunning Dravidian architecture temple dedicated to Goddess Meenakshi',
-      image: '/image/tamil_nadu.webp',
+      image: '/pages/tamil_nadu.webp',
       rating: 4.7,
       visitTime: '2-3 hours',
       highlights: ['Dravidian Style', 'Colorful Towers', 'Ancient']
@@ -63,7 +63,7 @@ const templesData = {
     { 
       name: 'Brihadeeswara Temple', 
       description: 'UNESCO World Heritage Site showcasing Chola dynasty architecture',
-      image: '/image/tamil_nadu.webp',
+      image: '/pages/tamil_nadu.webp',
       rating: 4.8,
       visitTime: '2 hours',
       highlights: ['UNESCO Site', 'Chola Architecture', 'Ancient']
@@ -73,7 +73,7 @@ const templesData = {
     { 
       name: 'Padmanabhaswamy Temple', 
       description: 'Ancient temple known for its intricate architecture and spiritual significance',
-      image: '/image/kerala.webp',
+      image: '/pages/kerala.webp',
       rating: 4.6,
       visitTime: '1-2 hours',
       highlights: ['Ancient Temple', 'Gold Treasures', 'Spiritual']
@@ -81,7 +81,7 @@ const templesData = {
     { 
       name: 'Guruvayur Temple', 
       description: 'Sacred Krishna temple with traditional Kerala architecture',
-      image: '/image/kerala.webp',
+      image: '/pages/kerala.webp',
       rating: 4.7,
       visitTime: '1-2 hours',
       highlights: ['Krishna Temple', 'Traditional Style', 'Pilgrimage']
