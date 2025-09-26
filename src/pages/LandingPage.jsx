@@ -72,7 +72,7 @@ export default function LandingPage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/image/langing_page_image02.png" 
+            src="src/pages/image/langing_page_image02.png" 
             alt="Heritage Background" 
             className="w-full h-full object-cover"
           />
@@ -131,7 +131,7 @@ export default function LandingPage() {
       <section className="py-12 md:py-20 relative">
         <div className="absolute inset-0">
           <img 
-            src="/image/langing_page_image02.png" 
+            src="/pages/langing_page_image02.png" 
             alt="Welcome Background" 
             className="w-full h-full object-cover"
           />
@@ -161,7 +161,7 @@ export default function LandingPage() {
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="/image/langing_page_image02.png" 
+                src="src/pages/image/langing_page_image01.png" 
                 alt="Heritage Discovery" 
                 className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -285,7 +285,7 @@ export default function LandingPage() {
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="/image/langing_page_image01.png" 
+                src="src/pages/image/langing_page_image02.png" 
                 alt="Technology Innovation" 
                 className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />

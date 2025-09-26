@@ -19,15 +19,15 @@ const templesData = {
     { 
       name: 'Hampi', 
       description: 'Ancient temple complex and UNESCO World Heritage Site with stunning Vijayanagara architecture',
-      image: '/image/hampi_virsupaksha.jpg',
-      rating: 4.8,
+      image: VirupakshaTempleTower,
+      rating: 4.4,
       visitTime: '2-3 hours',
       highlights: ['UNESCO Site', 'Ancient Ruins', '3D Models Available']
     },
     { 
       name: 'Mysore Palace', 
       description: 'Magnificent royal palace showcasing Indo-Saracenic architecture',
-      image: '/image/karanataka.webp',
+      image: "../src/pages/image/karanataka.webp",
       rating: 4.6,
       visitTime: '1-2 hours',
       highlights: ['Royal Heritage', 'Architecture', 'Light Show']

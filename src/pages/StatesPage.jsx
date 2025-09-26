@@ -6,25 +6,25 @@ import { ArrowRight, MapPin, Users } from 'lucide-react'
 const states = [
   { 
     name: 'Karnataka', 
-    image: '/image/karanataka.webp',
+    image: 'src/pages/image/karanataka.webp',
     temples: 12,
     description: 'Home to the magnificent Hampi ruins and Vijayanagara Empire heritage'
   },
   { 
     name: 'Andhra Pradesh', 
-    image: '/image/andhra_pradesh.jpg',
+    image: 'src/pages/image/andhra_pradesh.jpg',
     temples: 8,
     description: 'Sacred land of Tirupati and ancient Buddhist heritage sites'
   },
   { 
     name: 'Tamil Nadu', 
-    image: '/image/tamil_nadu.webp',
+    image: 'src/pages/image/tamil_nadu.webp',
     temples: 15,
     description: 'Dravidian architecture masterpieces and UNESCO World Heritage temples'
   },
   { 
     name: 'Kerala', 
-    image: '/image/kerala.webp',
+    image: 'src/pages/image/kerala.webp',
     temples: 6,
     description: 'Traditional Kerala temple architecture and spiritual heritage'
   },
