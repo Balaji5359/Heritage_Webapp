@@ -46,22 +46,22 @@ export default function LandingPage() {
       <motion.header 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg p-4 flex justify-between items-center z-50"
+        className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg p-3 md:p-4 flex justify-between items-center z-50"
       >
         <motion.h1 
           whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+          className="text-lg md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent"
         >
           Heritage India
         </motion.h1>
-        <nav className="flex space-x-6">
+        <nav className="flex space-x-3 md:space-x-6">
           {['Login', 'Sign Up', 'Explore States'].map((item, i) => (
             <motion.div key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link 
                 to={item === 'Explore States' ? '/states' : `/${item.toLowerCase().replace(' ', '')}`}
-                className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
+                className="text-gray-700 font-medium hover:text-orange-600 transition-colors text-xs md:text-base"
               >
-                {item}
+                {item === 'Explore States' ? 'Explore' : item}
               </Link>
             </motion.div>
           ))}
@@ -70,24 +70,29 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/70"></div>
+        <div className="absolute inset-0">
+          <img 
+            src="/image/langing_page_image02.png" 
+            alt="Heritage Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-        
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 text-center text-white max-w-4xl px-6"
+          className="relative z-10 text-center text-white max-w-4xl px-4 md:px-6"
         >
           <motion.h1 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-6xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight"
           >
-            Explore India's
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Cultural Heritage
+            
+            <span className="block bg-gradient-to-r from-orange-300 via-amber-300 to-yellow-300 bg-clip-text text-transparent drop-shadow-lg">
+              
             </span>
           </motion.h1>
           
@@ -95,81 +100,121 @@ export default function LandingPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl mb-8 text-gray-200"
+            className="text-lg md:text-xl mb-6 md:mb-8 text-orange-100 font-medium"
           >
-            Discover ancient temples and monuments through immersive 3D & AR experiences
           </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link 
                 to="/states" 
-                className="inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all"
+                className="inline-flex items-center bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:via-amber-600 hover:to-orange-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-2xl transition-all text-sm md:text-base"
               >
-                Explore Now <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 md:w-5 h-4 md:h-5" />
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <button className="inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold border border-white/30 transition-all">
-                <Play className="mr-2 w-5 h-5" /> Watch Demo
+              <button className="inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold border border-orange-300/50 hover:border-orange-300 transition-all text-sm md:text-base">
+                <Play className="mr-2 w-4 md:w-5 h-4 md:h-5" /> 
               </button>
             </motion.div>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Heritage Discovery Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Welcome Section with Landing Image */}
+      <section className="py-12 md:py-20 relative">
+        <div className="absolute inset-0">
+          <img 
+            src="/image/langing_page_image02.png" 
+            alt="Welcome Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/80"></div>
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 md:mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 bg-clip-text text-transparent mb-3 md:mb-6">
+              Welcome to Heritage India
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+              Embark on a journey through time and discover India's magnificent cultural treasures
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative group"
             >
+              <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="/image/langing_page_image01.png" 
+                src="/image/langing_page_image02.png" 
                 alt="Heritage Discovery" 
-                className="rounded-3xl shadow-2xl w-full h-96 object-cover"
+                className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-900/60 via-transparent to-transparent rounded-2xl md:rounded-3xl"></div>
+              <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 md:p-4">
+                  <h3 className="text-sm md:text-lg font-bold text-orange-800 mb-1">Ancient Wonders Await</h3>
+                  <p className="text-xs md:text-sm text-gray-700">Experience 5000+ years of heritage</p>
+                </div>
+              </div>
             </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
             >
-              <h2 className="text-4xl font-bold text-gray-800">Discover Ancient Wonders</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-800">Discover Ancient Wonders</h2>
+              <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
                 Explore over 5,000 years of Indian heritage through cutting-edge 3D technology. 
-                From the majestic temples of Hampi to the intricate carvings of Khajuraho.
+                From the majestic temples of Hampi to the intricate carvings of ancient monuments.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-blue-50 p-4 rounded-2xl">
-                  <h3 className="text-2xl font-bold text-blue-600">1000+</h3>
-                  <p className="text-gray-600">Heritage Sites</p>
-                </div>
-                <div className="bg-indigo-50 p-4 rounded-2xl">
-                  <h3 className="text-2xl font-bold text-indigo-600">50+</h3>
-                  <p className="text-gray-600">3D Models</p>
-                </div>
-                <div className="bg-cyan-50 p-4 rounded-2xl">
-                  <h3 className="text-2xl font-bold text-cyan-600">25</h3>
-                  <p className="text-gray-600">States Covered</p>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-2xl">
-                  <h3 className="text-2xl font-bold text-purple-600">AR Ready</h3>
-                  <p className="text-gray-600">Experience</p>
-                </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-6">
+                <motion.div 
+                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  className="bg-gradient-to-br from-orange-100 to-orange-200 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg"
+                >
+                  <h3 className="text-lg md:text-2xl font-bold text-orange-600">1000+</h3>
+                  <p className="text-gray-700 text-xs md:text-base">Heritage Sites</p>
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05, rotate: -2 }}
+                  className="bg-gradient-to-br from-amber-100 to-amber-200 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg"
+                >
+                  <h3 className="text-lg md:text-2xl font-bold text-amber-600">50+</h3>
+                  <p className="text-gray-700 text-xs md:text-base">3D Models</p>
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  className="bg-gradient-to-br from-yellow-100 to-yellow-200 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg"
+                >
+                  <h3 className="text-lg md:text-2xl font-bold text-yellow-600">25</h3>
+                  <p className="text-gray-700 text-xs md:text-base">States Covered</p>
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05, rotate: -2 }}
+                  className="bg-gradient-to-br from-red-100 to-red-200 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg"
+                >
+                  <h3 className="text-lg md:text-2xl font-bold text-red-600">AR Ready</h3>
+                  <p className="text-gray-700 text-xs md:text-base">Experience</p>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -177,49 +222,58 @@ export default function LandingPage() {
       </section>
 
       {/* Technology Innovation Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6 order-2 lg:order-1"
+              className="space-y-4 md:space-y-6 order-2 lg:order-1"
             >
-              <h2 className="text-4xl font-bold text-gray-800">Next-Gen Heritage Experience</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-800">Next-Gen Heritage Experience</h2>
+              <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
                 Immerse yourself in history with our advanced AR/VR technology. 
                 Walk through ancient temples, interact with historical artifacts, and learn from expert guides.
               </p>
               
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">3D</span>
+              <div className="space-y-3 md:space-y-4">
+                <motion.div 
+                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-3 md:space-x-4 bg-white/70 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-lg"
+                >
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-sm md:text-base">3D</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Interactive 3D Models</h4>
-                    <p className="text-gray-600">Rotate, zoom, and explore every detail</p>
+                    <h4 className="font-semibold text-gray-800 text-sm md:text-base">Interactive 3D Models</h4>
+                    <p className="text-gray-600 text-xs md:text-sm">Rotate, zoom, and explore every detail</p>
                   </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">AR</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Augmented Reality</h4>
-                    <p className="text-gray-600">Place monuments in your space</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">AI</span>
+                </motion.div>
+                <motion.div 
+                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-3 md:space-x-4 bg-white/70 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-lg"
+                >
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-sm md:text-base">AR</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">AI-Powered Insights</h4>
-                    <p className="text-gray-600">Learn with intelligent recommendations</p>
+                    <h4 className="font-semibold text-gray-800 text-sm md:text-base">Augmented Reality</h4>
+                    <p className="text-gray-600 text-xs md:text-sm">Place monuments in your space</p>
                   </div>
-                </div>
+                </motion.div>
+                <motion.div 
+                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-3 md:space-x-4 bg-white/70 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-lg"
+                >
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-sm md:text-base">AI</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 text-sm md:text-base">AI-Powered Insights</h4>
+                    <p className="text-gray-600 text-xs md:text-sm">Learn with intelligent recommendations</p>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
             
@@ -227,30 +281,31 @@ export default function LandingPage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative order-1 lg:order-2"
+              className="relative order-1 lg:order-2 group"
             >
+              <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="/image/langing_page_image02.png" 
+                src="/image/langing_page_image01.png" 
                 alt="Technology Innovation" 
-                className="rounded-3xl shadow-2xl w-full h-96 object-cover"
+                className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/50 to-transparent rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent rounded-2xl md:rounded-3xl"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Featured 3D Models */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured 3D Heritage Models</h2>
-            <p className="text-gray-600 text-lg">Experience India's architectural marvels in stunning 3D detail</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Featured 3D Heritage Models</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Experience India's architectural marvels in stunning 3D detail</p>
           </motion.div>
 
           {loading ? (
@@ -375,16 +430,16 @@ export default function LandingPage() {
       </section>
 
       {/* 3D Models Showcase */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Welcome to 3D and AR World</h2>
-            <p className="text-gray-600 text-lg">Experience heritage monuments in interactive 3D</p>
+            <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 bg-clip-text text-transparent mb-2 md:mb-4">Welcome to 3D and AR World</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Experience heritage monuments in interactive 3D</p>
           </motion.div>
           
           <Hampi3DShowcase />
