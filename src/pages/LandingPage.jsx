@@ -4,6 +4,16 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Play, Star, MapPin } from 'lucide-react'
 import Hampi3DShowcase from '../components/Hampi3DShowcase.jsx'
 
+// Import images
+import landingPage01 from './image/langing_page_image01.png'
+import landingPage02 from './image/langing_page_image02.png'
+
+// Image paths
+const IMAGES = {
+  landingPage01,
+  landingPage02
+}
+
 export default function LandingPage() {
   const [featuredModels, setFeaturedModels] = useState([])
   const [loading, setLoading] = useState(false)
@@ -72,7 +82,7 @@ export default function LandingPage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="src/pages/image/langing_page_image02.png" 
+            src={IMAGES.landingPage02} 
             alt="Heritage Background" 
             className="w-full h-full object-cover"
           />
@@ -131,7 +141,7 @@ export default function LandingPage() {
       <section className="py-12 md:py-20 relative">
         <div className="absolute inset-0">
           <img 
-            src="/pages/langing_page_image02.png" 
+            src={IMAGES.landingPage02} 
             alt="Welcome Background" 
             className="w-full h-full object-cover"
           />
@@ -161,7 +171,7 @@ export default function LandingPage() {
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="src/pages/image/langing_page_image01.png" 
+                src={IMAGES.landingPage02} 
                 alt="Heritage Discovery" 
                 className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -285,7 +295,7 @@ export default function LandingPage() {
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="src/pages/image/langing_page_image02.png" 
+                src={IMAGES.landingPage01} 
                 alt="Technology Innovation" 
                 className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />

@@ -3,28 +3,42 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, MapPin, Users } from 'lucide-react'
 
+// Import state images
+import karnataka from './image/karanataka.webp'
+import andhraPradesh from './image/andhra_pradesh.jpg'
+import tamilNadu from './image/tamil_nadu.webp'
+import kerala from './image/kerala.webp'
+
+// State images
+const STATE_IMAGES = {
+  karnataka,
+  andhraPradesh,
+  tamilNadu,
+  kerala
+}
+
 const states = [
   { 
     name: 'Karnataka', 
-    image: '/pages/karanataka.webp',
+    image: STATE_IMAGES.karnataka,
     temples: 12,
     description: 'Home to the magnificent Hampi ruins and Vijayanagara Empire heritage'
   },
   { 
     name: 'Andhra Pradesh', 
-    image: '/pages/andhra_pradesh.jpg',
+    image: STATE_IMAGES.andhraPradesh,
     temples: 8,
     description: 'Sacred land of Tirupati and ancient Buddhist heritage sites'
   },
   { 
     name: 'Tamil Nadu', 
-    image: '/pages/tamil_nadu.webp',
+    image: STATE_IMAGES.tamilNadu,
     temples: 15,
     description: 'Dravidian architecture masterpieces and UNESCO World Heritage temples'
   },
   { 
     name: 'Kerala', 
-    image: '/pages/kerala.webp',
+    image: STATE_IMAGES.kerala,
     temples: 6,
     description: 'Traditional Kerala temple architecture and spiritual heritage'
   },
